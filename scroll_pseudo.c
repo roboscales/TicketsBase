@@ -88,9 +88,11 @@ void renderScrollSlider(Scroll* scroll)
     short x = 0;
     short y = 0;
     
-    scroll->Slider_y = Slider_height * step;
-    if (scroll->step = scroll->max_step){
-        scroll->Slider_y == scroll->Slider_y + scroll->height - 1 - scroll->Slider_height;
+    if (scroll->step == scroll->max_step){
+        scroll->Slider_y = scroll->Slider_y + scroll->height - 1 - scroll->Slider_height;
+    }
+    else{
+        scroll->Slider_y = Slider_height * step;
     }
 
     for (i = 0; i < scroll->Slider_width; i++)
