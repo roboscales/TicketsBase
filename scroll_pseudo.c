@@ -30,14 +30,13 @@ typedef struct Scroll{
 // поменяешь на встроенную функцию
 void drawFillSymbol(short x, short y, short color);
 
-void renderScrollBody(Scroll* scroll)
+
+void renderScrollButton(Scroll* scroll)
 {
     short i = 0;
     short j = 0;
     short x = 0;
     short y = 0;
-
-    // вот это по факту отрисовывается 1 раз, а потом не меняется //
 
     // отрисовка кнопки вверх
     for (i = 0; i < scroll->width; i++)
@@ -56,9 +55,16 @@ void renderScrollBody(Scroll* scroll)
 
         drawFillSymbol(x, y, YOUR_COLOUR);
     }
+}
 
-    //////////////////////////////////////////////////////////////
+void renderScrollBody(Scroll* scroll)
+{
+    short i = 0;
+    short j = 0;
+    short x = 0;
+    short y = 0;
 
+    
     for (i = 0; i < scroll->width; i++)
     {
         for (j = 1; j < scroll->height - 1; j++)
