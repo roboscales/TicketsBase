@@ -132,7 +132,7 @@ Scroll.height = 45;
 
 Scroll.button_size = 1; 
 
-Scroll.x = 120 - Scroll.width; 
+Scroll.x = Console_count_row - Scroll.width; 
 Scroll.y = 5;           
 
 Scroll.Slider_width = Scroll.width; 
@@ -152,5 +152,3 @@ Scroll.max_step = floor(scroll->height / scroll->Scroll_height);
 ////
 
 /////////////////////Конец инициализации//////////////////
-
-
