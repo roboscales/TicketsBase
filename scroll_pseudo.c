@@ -89,6 +89,9 @@ void renderScrollSlider(Scroll* scroll)
     short y = 0;
     
     scroll->Slider_y = Slider_height * step;
+    if (scroll->step = scroll->max_step){
+        scroll->Slider_y = scroll->Slider_y + scroll->height - 1 - scroll->Slider_height;
+    }
 
     for (i = 0; i < scroll->Slider_width; i++)
     {
@@ -133,7 +136,7 @@ Scroll.height = 45;
 Scroll.button_size = 1; 
 
 Scroll.x = Console_count_row - Scroll.width; 
-Scroll.y = 5;           
+Scroll.y = 5;
 
 Scroll.Slider_width = Scroll.width; 
 
@@ -152,3 +155,5 @@ Scroll.max_step = floor(scroll->height / scroll->Scroll_height);
 ////
 
 /////////////////////Конец инициализации//////////////////
+
+
