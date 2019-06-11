@@ -69,6 +69,9 @@ void renderScrollBody(Scroll* scroll)
             drawFillSymbol(x, y, YOUR_COLOUR);
         }
     }
+
+    // после отрисовки тела, отрисовываем сразу ползунок
+    renderScrollSlider(scroll);
 }
 
 
@@ -96,15 +99,19 @@ void renderScrollSlider(Scroll* scroll)
 
 void prevStep(Scroll* scroll)
 {
-    if (scroll->step > 0)
+    if (scroll->step > 0){
         scroll->step--;
+        renderScrollBody(scrool;)
+    }
 }
 
 
 void nextStep(Scroll* scroll)
 {
-    if (scroll->step < scroll->max_step)
+    if (scroll->step < scroll->max_step){
         scroll->step++;
+        renderScrollBody(scrool;
+    }
 }
 
 // инициализируешь там где надо структуру //
@@ -139,3 +146,5 @@ Scroll.max_step = floor(scroll->height / scroll->Scroll_height);
 ////
 
 /////////////////////Конец инициализации//////////////////
+
+
